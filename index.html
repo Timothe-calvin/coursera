@@ -4,70 +4,149 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Timothe Calvin Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+    }
+    .home-icon {
+      font-size: 18px;
+      margin-right: 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    #about img {
+      border-radius: 50%;
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .skill {
+      text-align: center;
+      width: 100px;
+    }
+    .skill img {
+      width: 60px;
+      height: 60px;
+    }
+    .projects, .recommendations {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 200px;
+    }
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      min-height: 80px;
+      resize: vertical;
+    }
+    button {
+      padding: 10px;
+      background: #222;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #444;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
- <header>
-  <div class="header-top">
+  <header>
     <span class="home-icon">🏠 Home</span>
-    <br />
     <h1>Timothe Calvin</h1>
-  </div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#recommendations">Recommendations</a>
-  </nav>
-</header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#recommendations">Recommendations</a>
+    </nav>
+  </header>
+
   <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <img src="https://media.licdn.com/dms/image/v2/D5603AQEIu9Vul5D5KQ/profile-displayphoto-scale_200_200/B56ZgaIm5CG4Ak-/0/1752785122504?e=2147483647&v=beta&t=_SBWQ-KlphvHiHy8Ea_uCJV8abt6L_EX8mk8c7n1L_o" alt="Profile Picture" />
-    <p>Hello! I am Timothe Calvin, a passionate web developer with experience in front-end and back-end technologies. I enjoy creating Discord bots and building web applications with clean, efficient code.</p>
+    <p>Hello! I am <strong>Timothe Calvin</strong>, a passionate web developer with experience in front-end and back-end technologies. I enjoy creating Discord bots and building modern, responsive web applications.</p>
   </section>
 
   <!-- Skills Section -->
-  <!-- Skills Section -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-container">
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo" />
-      <p>HTML5</p>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><p>HTML5</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><p>CSS3</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/><p>JavaScript</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/><p>React</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/><p>Node.js</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/><p>MongoDB</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/><p>GitHub</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/><p>Bootstrap</p></div>
     </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo" />
-      <p>CSS3</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS Logo" />
-      <p>JavaScript</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo" />
-      <p>React</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS Logo" />
-      <p>Node.js</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap Logo" />
-      <p>Bootstrap</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Logo" />
-      <p>Git & GitHub</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Logo" />
-      <p>MongoDB</p>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Projects Section -->
   <section id="projects">
@@ -75,41 +154,53 @@
     <div class="projects">
       <div class="card">
         <h3>Portfolio Website</h3>
-        <p>Check out my personal website: <a href="https://asafespace.neocities.org/" target="_blank">asafespace.neocities.org</a></p>
+        <p>Check out my personal site: <a href="https://asafespace.neocities.org/" target="_blank">asafespace.neocities.org</a></p>
       </div>
       <div class="card">
-        <h3>Ongoing Projects</h3>
-        <p>GitHub with ongoing and completed projects: <a href="https://github.com/Timothe-calvin" target="_blank">github.com/Timothe-calvin</a></p>
+        <h3>GitHub Projects</h3>
+        <p>Explore my ongoing and completed work: <a href="https://github.com/Timothe-calvin" target="_blank">GitHub Profile</a></p>
       </div>
       <div class="card">
         <h3>Task Manager App</h3>
-        <p>A web application to manage daily tasks with user authentication.</p>
+        <p>A web application to manage daily tasks with user authentication and cloud storage.</p>
       </div>
     </div>
   </section>
 
-<!-- Recommendations List -->
-<section id="recommendations">
-  <h2>Recommendations</h2>
-  <div class="recommendations" id="recommendationList">
-    <div class="card">"random compliment 1"</div>
-    <div class="card">"random compliment 2"</div>
-    <div class="card">"random compliment 3"</div>
-  </div>
-</section>
+  <!-- Recommendations Section -->
+  <section id="recommendations">
+    <h2>Recommendations</h2>
+    <div class="recommendations" id="recommendationList">
+      <div class="card">"Timothe is highly creative and always brings new ideas to the team."</div>
+      <div class="card">"His attention to detail ensures high-quality, polished work."</div>
+      <div class="card">"Great collaborator and problem solver under pressure."</div>
+    </div>
 
-<!-- Add Recommendation Form -->
-<section id="add-recommendation">
-  <h2>Leave a Recommendation</h2>
-  <form id="recommendationForm">
-    <textarea id="recommendationInput" placeholder="Write your recommendation here..." required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</section>
+    <form id="recommendationForm">
+      <h3>Leave a Recommendation</h3>
+      <textarea id="recommendationInput" placeholder="Write your recommendation here..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-<!-- Make sure this is at the bottom of the body -->
-<script src="script.js"></script>
+  <script>
+    // handle recommendation submission
+    const form = document.getElementById("recommendationForm");
+    const input = document.getElementById("recommendationInput");
+    const list = document.getElementById("recommendationList");
 
-
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // stop reload
+      const text = input.value.trim();
+      if (text) {
+        const newRec = document.createElement("div");
+        newRec.classList.add("card");
+        newRec.textContent = `"${text}"`;
+        list.appendChild(newRec);
+        input.value = "";
+        alert("✅ Thank you! Your recommendation has been submitted.");
+      }
+    });
+  </script>
 </body>
 </html>
