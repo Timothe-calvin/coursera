@@ -1,87 +1,188 @@
-body {
-  font-family: Arial, sans-serif;
+/* ===== General Styles ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
   line-height: 1.6;
 }
+
+/* ===== Header ===== */
 header {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.header-top {
   display: flex;
   align-items: center;
-  background: #333;
-  color: white;
-  padding: 10px 20px;
+  justify-content: flex-start;
+  gap: 15px;
 }
-header h1 {
-  margin: 0;
+
+.header-top h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffd700; /* Styled name */
+}
+
+.home-icon {
   font-size: 24px;
+  cursor: pointer;
 }
+
 nav {
-  margin-left: auto;
+  margin-top: 10px;
 }
+
 nav a {
   color: white;
-  margin: 0 10px;
+  margin-right: 20px;
   text-decoration: none;
+  font-weight: 500;
   transition: all 0.3s;
 }
+
 nav a:hover {
   color: #ffd700;
+  font-style: italic;
   text-decoration: underline;
 }
+
+/* ===== Sections ===== */
 section {
-  padding: 20px;
+  padding: 50px 30px;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* Section titles */
+section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #1e1e2f;
+  border-bottom: 2px solid #ffd700;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ===== About Section ===== */
 #about img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  object-fit: cover;
   display: block;
-  margin-bottom: 10px;
+  margin: 15px 0;
 }
+
+/* ===== Skills Section ===== */
 .skills-container {
   display: flex;
-  gap: 20px;
-}
-.skill {
-  text-align: center;
-}
-.skill img {
-  width: 50px;
-  height: 50px;
-}
-.projects, .recommendations {
-  display: flex;
-  gap: 20px;
+  gap: 40px;
   flex-wrap: wrap;
 }
-.card {
-  border: 1px solid #ccc;
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skills-container .skill img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* ===== Projects Section ===== */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projects .card {
+  flex: 1 1 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
   border-radius: 8px;
-  padding: 10px;
-  width: 30%;
-  min-width: 200px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
-.home-icon {
-  font-size: 20px;
-  margin-right: 10px;
-  cursor: pointer;
+
+.projects .card:hover {
+  transform: translateY(-5px);
 }
+
+/* ===== Recommendations Section ===== */
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recommendations .card {
+  background-color: #fef9e7;
+  padding: 15px;
+  border-left: 5px solid #ffd700;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+/* Recommendation Form */
 form {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
 form textarea {
-  width: 100%;
   padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
 }
+
 form button {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #333;
+  width: 150px;
+  padding: 10px;
+  background-color: #1e1e2f;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
+
 form button:hover {
-  background: #555;
+  background-color: #333366;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .skills-container, .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }

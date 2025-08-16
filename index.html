@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Client Portfolio</title>
+  <title>Timothe Calvin Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <span class="home-icon">🏠 Home</span>  <br> 
-    <h1>Timothe Calvin</h1> </br>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#recommendations">Recommendations</a>
-    </nav>
-  </header>
-
+  <!-- Header -->
+ <header>
+  <div class="header-top">
+    <span class="home-icon">🏠 Home</span>
+    <br />
+    <h1>Timothe Calvin</h1>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#recommendations">Recommendations</a>
+  </nav>
+</header>
   <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <img src="https://media.licdn.com/dms/image/v2/D5603AQEIu9Vul5D5KQ/profile-displayphoto-scale_200_200/B56ZgaIm5CG4Ak-/0/1752785122504?e=2147483647&v=beta&t=_SBWQ-KlphvHiHy8Ea_uCJV8abt6L_EX8mk8c7n1L_o" alt="Profile Picture" />
-    <p>Hello! I am Timothe Calvin, a passionate web developer with experience in front-end and back-end technologies. I enjoy creating discord bots and learning to do things properly in terms of building web applications.</p>
+    <p>Hello! I am Timothe Calvin, a passionate web developer with experience in front-end and back-end technologies. I enjoy creating Discord bots and building web applications with clean, efficient code.</p>
   </section>
 
   <!-- Skills Section -->
@@ -50,11 +53,11 @@
     <div class="projects">
       <div class="card">
         <h3>Portfolio Website</h3>
-        <p>check out my personal website https://asafespace.neocities.org/</p>
+        <p>Check out my personal website: <a href="https://asafespace.neocities.org/" target="_blank">asafespace.neocities.org</a></p>
       </div>
       <div class="card">
-        <h3>ongoing projects</h3>
-        <p>github pages with ongoing and completed projects https://github.com/Timothe-calvin</p>
+        <h3>Ongoing Projects</h3>
+        <p>GitHub with ongoing and completed projects: <a href="https://github.com/Timothe-calvin" target="_blank">github.com/Timothe-calvin</a></p>
       </div>
       <div class="card">
         <h3>Task Manager App</h3>
@@ -67,13 +70,13 @@
   <section id="recommendations">
     <h2>Recommendations</h2>
     <div class="recommendations" id="recommendationList">
-      <div class="card">"random compliment 1"</div>
-      <div class="card">"random compliment 2"</div>
-      <div class="card">"random compliment 3"</div>
+      <div class="card">"Random compliment 1"</div>
+      <div class="card">"Random compliment 2"</div>
+      <div class="card">"Random compliment 3"</div>
     </div>
 
     <form id="recommendationForm">
-      <h3>Leave a Recommendation for growth</h3>
+      <h3>Leave a Recommendation</h3>
       <textarea id="recommendationInput" placeholder="Write your recommendation here..." required></textarea>
       <button type="submit">Submit</button>
     </form>
