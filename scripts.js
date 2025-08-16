@@ -1,15 +1,29 @@
-// Add new recommendation dynamically
-document.getElementById("recommendationForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const input = document.getElementById("recommendationInput").value;
-  if (input.trim() !== "") {
-    const newCard = document.createElement("div");
-    newCard.className = "card";
-    newCard.textContent = `"${input}"`;
-    document.getElementById("recommendationList").appendChild(newCard);
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("recommendationForm");
+  const input = document.getElementById("recommendationInput");
+  const list = document.getElementById("recommendationList");
 
-    // Confirmation popup
-    alert("Thank you for your recommendation!");
-    document.getElementById("recommendationForm").reset();
-  }
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // stop page reload
+
+    const text = input.value.trim();
+    if (text !== "") {
+      // create new recommendation card
+      const newRec = document.createElement("div");
+      newRec.classList.add("card");
+      newRec.textContent = `"${text}"`;
+
+      // add to list
+      list.appendChild(newRec);
+
+      // clear input
+      input.value = "";
+
+      // popup confirmation
+      alert("✅ Thank you! Your recommendation has been submitted.");
+    } else {
+      alert("⚠️ Please enter a recommendation before submitting.");
+    }
+  });
 });
+
